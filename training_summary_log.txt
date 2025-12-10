@@ -1,5 +1,0 @@
-
-
-Training Run Completed.
-Total Timesteps: 100,000
-Device: cuda

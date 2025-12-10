@@ -7,3 +7,10 @@ logs/
 retraining_logs/
 frontend/node_modules/
 frontend/.next/
+archive/
+training_summary_log.txt
+stability_report.txt
+test_simulation.py
+mcp_config.json
+
+
