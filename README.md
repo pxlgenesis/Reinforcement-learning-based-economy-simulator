@@ -1,95 +1,95 @@
 # Economy Reinforcement Learning Simulator
 
-An advanced Agent-Based Model (ABM) economy simulation where a Reinforcement Learning (RL) agent acts as the government to optimize economic stability and prosperity.
+## Project Overview
 
-## 🚀 Project Overview
+This project implements an Agent-Based Model (ABM) economy simulation where a Reinforcement Learning (RL) agent acts as the government. The primary objective is to optimize economic stability and prosperity through fiscal and monetary policy interventions.
 
-This project simulates a closed economy consisting of **Households** and **Firms**. An AI agent (trained using PPO) controls fiscal and monetary policy to achieve sustainable economic growth while minimizing inequality and unemployment.
+The simulation consists of a closed economy with two primary agent types:
+*   **Households**: Agents that work, consume goods, save money, and acquire skills over time.
+*   **Firms**: Entities that produce goods, set prices, hire or fire employees based on demand, and manage inventory.
 
-### Key Features
-*   **Agent-Based Modeling**:
-    *   **Households**: Work, consume, save, and learn skills.
-    *   **Firms**: Produce goods, set prices, hire/fire employees, and manage inventory.
-*   **Market Mechanics**:
-    *   **Labor Market**: Decentralized matching based on wage offers.
-    *   **Goods Market**: Imperfect competition where households shop for the best prices.
-*   **Reinforcement Learning**:
-    *   **Agent**: Acts as the Central Bank/Government.
-    *   **Actions**: Sets Income Tax, Corporate Tax, and Universal Basic Income (UBI).
-    *   **Observations**: GDP, Inflation, Unemployment, Gini Coefficient, etc.
-    *   **Algorithm**: Proximal Policy Optimization (PPO).
-*   **Real-time Visualization**:
-    *   A Next.js-based dashboard to monitor the economy in real-time.
+The RL agent, trained using Proximal Policy Optimization (PPO), observes macroeconomic indicators (such as GDP, inflation, unemployment, and the Gini coefficient) and takes actions to influence the economy. These actions include setting income tax rates, corporate tax rates, and Universal Basic Income (UBI) levels.
 
-## 📂 Project Structure
+## Project Structure
 
-```
-├── economy_sim/        # Core Python package for the simulation
-│   ├── envs/           # Gym environments and agent logic (Firms, Households)
-│   ├── training/       # RL training scripts (PPO)
-│   └── launcher/       # Simulation launcher
-├── frontend/           # Next.js web dashboard for visualization
-├── models/             # Saved trained RL models
-├── docs/               # Detailed documentation and architectural plans
-└── tests/              # Unit and stability tests
-```
+*   `economy_sim/`: Contains the core Python package for the simulation, including environment definitions and agent logic.
+*   `frontend/`: A Next.js web application that serves as a dashboard for real-time visualization of the simulation.
+*   `models/`: Stores trained Reinforcement Learning models.
+*   `docs/`: Includes detailed documentation regarding the system architecture, economic model, and RL formulation.
 
-## 🛠️ Installation & Setup
+## Installation
 
-### 1. Backend (Simulation)
+### Backend (Simulation)
 
-Prerequisites: Python 3.8+
+The simulation requires Python 3.8 or higher.
 
-```bash
-# Create a virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+1.  Create a virtual environment:
+    ```bash
+    python -m venv .venv
+    ```
 
-# Install dependencies
-pip install -r requirements.txt
-```
+2.  Activate the virtual environment:
+    *   Windows: `.venv\Scripts\activate`
+    *   Unix/MacOS: `source .venv/bin/activate`
 
-### 2. Frontend (Dashboard)
+3.  Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Prerequisites: Node.js 18+
+### Frontend (Dashboard)
 
-```bash
-cd frontend
-npm install
-```
+The dashboard requires Node.js 18 or higher.
 
-## 🏃‍♂️ Usage
+1.  Navigate to the frontend directory:
+    ```bash
+    cd frontend
+    ```
+
+2.  Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+## Usage
 
 ### Running the Simulation
-To run the simulation with the trained model and start the API server:
+
+To execute the simulation using the trained model and start the API server for the dashboard:
 
 ```bash
 python -m economy_sim.launcher.launcher
 ```
 
 ### Running the Dashboard
-In a separate terminal:
+
+To start the visualization dashboard:
+
+1.  Open a new terminal window.
+2.  Navigate to the `frontend` directory.
+3.  Start the development server:
 
 ```bash
-cd frontend
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) to view the simulation dashboard.
+
+4.  Access the dashboard at `http://localhost:3000` in your web browser.
 
 ### Training the Agent
-To retrain the RL agent:
+
+To retrain the Reinforcement Learning agent:
 
 ```bash
 python -m economy_sim.training.train_ppo
 ```
 
-## 📚 Documentation
+## Documentation
 
-Detailed documentation can be found in the `docs/` directory:
+For further details on the implementation, refer to the documents in the `docs/` directory:
 *   [System Architecture](docs/system_architecture.md)
 *   [Economic Model](docs/phase_1_economic_model.md)
 *   [RL Formulation](docs/phase_2_rl_formulation.md)
 
-## 📄 License
+## License
 
-[MIT License](LICENSE)
+This project is licensed under the MIT License.
