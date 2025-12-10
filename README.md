@@ -87,8 +87,8 @@ python -m economy_sim.training.train_ppo
 
 For further details on the implementation, refer to the documents in the `docs/` directory:
 *   [System Architecture](docs/system_architecture.md)
-*   [Economic Model](docs/phase_1_economic_model.md)
-*   [RL Formulation](docs/phase_2_rl_formulation.md)
+*   [Economic Model](docs/economic_model.md)
+*   [RL Formulation](docs/rl_formulation.md)
 
 ## License
 
