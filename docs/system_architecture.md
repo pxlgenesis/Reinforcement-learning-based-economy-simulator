@@ -1,8 +1,7 @@
 # System Architecture & Workflow
 
-This diagram illustrates the high-level architecture of the Economy Reinforcement Simulator, showing the interaction between the Reinforcement Learning (RL) Agent and the Economic Environment.
+This document outlines the high-level architecture of the Economy Reinforcement Simulator, showing the interaction between the Reinforcement Learning (RL) Agent and the Economic Environment.
 
-![System Architecture Diagram](./images/economy_sim_architecture_diagram.png)
 
 ## Workflow Description
 
