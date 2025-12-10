@@ -1,0 +1,20 @@
+=== Economy Simulation Stability Report ===
+Simulation Duration: 240 Months
+Agents: 10 Firms, 100 Households
+
+=== Final Statistics ===
+Final Unemployment: 49.0%
+Final Avg Price: $951.00
+Final Avg Wage: $2713.15
+Final GDP: $131584.17
+Final Avg Firm Cash: $40330.47
+Final Avg Household Cash: $1200.18
+Final Avg Firm Tier: 1.10
+Total Firm Bankruptcies: 140
+
+=== Stability Analysis ===
+[PASS] Employment Levels Healthy
+Total Inflation (20 Years): 9604.1%
+[WARN] High Inflation detected.
+[FAIL] Stagnation: Firms are not upgrading Tiers.
+[PASS] Household Wealth exists.
